@@ -1,0 +1,7 @@
+---
+development:
+  host: <%= ENV['ELASTICSEARCH_HOST']%>
+  log: true
+test:
+  host: localhost:9250
+  log: true
