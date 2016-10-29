@@ -5,16 +5,16 @@ default: &default
 
 development:
   <<: *default
-  database: twitter_search_development
-
+  database: <%= ENV['DB_NAME']%>
   username: <%= ENV['DEVELOPMENT_DB_USER']%>
   password: <%= ENV['DEVELOPMENT_DB_PASSWORD']%>
 test:
   <<: *default
-  database: twitter_search_test
-
+  database: <%= ENV['DB_NAME']%>
+  username: <%= ENV['TEST_DB_USER']%>
+  password: <%= ENV['TEST_DB_PASSWORD'] %>
 production:
   <<: *default
-  database: twitter_search_production
-  username: twitter_search
-  password: <%= ENV['twitter_search_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DB_NAME']%>
+  username: <%= ENV['PRODUCTION_DB_USER']%>
+  password: <%= ENV['PRODUCTION_DB_PASSWORD'] %>
