@@ -1,5 +1,5 @@
 class EsImportTwitter
   def self.execute
-    puts "hello world"
+    p "hello world"
   end
 end
