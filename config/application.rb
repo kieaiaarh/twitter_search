@@ -20,5 +20,6 @@ module TwitterSearch
     config.action_view.field_error_proc = Proc.new { |html_tag, _instance| %Q(#{html_tag}).html_safe }
     config.autoload_paths += %W(#{config.root}/app/batch/)
     config.action_dispatch.rescue_responses.update('HTTP::Errors::NotFound' => :not_found)
+    config.autoload_paths += %W(#{config.root}/app/batches)
   end
 end
